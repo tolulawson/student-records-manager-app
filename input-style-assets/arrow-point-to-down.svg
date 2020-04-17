@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="9" viewBox="0 0 16 9">
+  <g id="arrow-point-to-right" transform="translate(16) rotate(90)">
+    <path id="Path" d="M8.676,8.792l-6.789,6.88a1.1,1.1,0,0,1-1.564,0,1.131,1.131,0,0,1,0-1.584L6.331,8,.324,1.913a1.131,1.131,0,0,1,0-1.585,1.1,1.1,0,0,1,1.564,0l6.789,6.88a1.131,1.131,0,0,1,0,1.584Z" transform="translate(0 0)" fill="#7d7a9e"/>
+  </g>
+</svg>

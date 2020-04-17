@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link rel="stylesheet" href="input-styles.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Student Records Manager</title>
+</head>
+
+<body>
+  <main>
+    <div class="container">
+      <div class="top-row">
+        <div class="search-container">
+          <div class="text-box autocomplete search">
+            <label for="" class="label">
+            </label>
+            <input class="text-box-input" type="text" name="" value="" placeholder="Search records">
+            <span class="error-message"></span>
+            <div class="select-list">
+              <ul class="select-list-ul">
+                <li class="select-item"></li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+        <div class="button-group">
+          <button type="button" name="button" class="button filter">Filter</button>
+          <div class="button-notification"></div>
+          <div class="filter-dropdown"></div>
+        </div>
+
+      </div>
+      <div class="ads-table">
+        <div class="ad-row head">
+          <div class="ad-row-edge">
+
+          </div>
+          <div class="col-1">
+            Name
+          </div>
+          <div class="col-2">
+            Dept
+          </div>
+          <div class="col-3">
+            Level
+          </div>
+          <div class="col-4">
+            Year
+          </div>
+        </div>
+        <div class="ad-row body">
+          <div class="ad-row-edge">
+
+          </div>
+          <div class="col-1">
+            Chris Evans
+          </div>
+          <div class="col-2">
+            Engineering
+          </div>
+          <div class="col-3">
+            200
+          </div>
+          <div class="col-4">
+            2005
+          </div>
+          <button type="button" name="button" class="delete-button"></button>
+
+        </div>
+        <div class="ad-row body">
+          <div class="ad-row-edge">
+
+          </div>
+          <div class="col-1">
+            Robert Downey
+          </div>
+          <div class="col-2">
+
+            Sociology
+          </div>
+          <div class="col-3">
+            100
+          </div>
+          <div class="col-4">
+            2016
+          </div>
+          <button type="button" name="button" class="delete-button"></button>
+        </div>
+        <div class="ad-row body">
+          <div class="ad-row-edge">
+
+          </div>
+          <div class="col-1">
+            Hugh Jackman
+          </div>
+          <div class="col-2">
+
+            Physics
+          </div>
+          <div class="col-3">
+            300
+          </div>
+          <div class="col-4">
+            2016
+          </div>
+          <button type="button" name="button" class="delete-button"></button>
+        </div>
+        <div class="ad-row body">
+          <div class="ad-row-edge">
+
+          </div>
+          <div class="col-1">
+            Chadwick Boseman
+          </div>
+          <div class="col-2">
+            Law
+          </div>
+          <div class="col-3">
+            200
+          </div>
+          <div class="col-4">
+            2017
+          </div>
+          <button type="button" name="button" class="delete-button"></button>
+
+        </div>
+        <div class="ad-row body">
+          <div class="ad-row-edge">
+
+          </div>
+          <div class="col-1">
+            Anne Hathaway
+          </div>
+          <div class="col-2">
+
+            Law
+          </div>
+          <div class="col-3">
+            400
+          </div>
+          <div class="col-4">
+            2017
+          </div>
+          <button type="button" name="button" class="delete-button"></button>
+        </div>
+      </div>
+      <div class="add-button-row">
+        <button type="button" name="button" class="add-button show-modal pink-button" onclick="this.blur();">Create new record
+        </button>
+      </div>
+
+      <!-- Begin modal -->
+
+      <div class="modal-container">
+        <div class="modal">
+          <div class="top-row">
+            <h3>Create new record</h3>
+            <button type="button" name="button" class="modal-close-button" onclick="this.blur();"></button>
+          </div>
+
+          <form action="" method="post" class="modal-form" autocomplete="off">
+            <div class="text-box one-half validate">
+              <label for="ad-name" class="label">Name
+              </label>
+              <input class="text-box-input" type="text" name="ad-name" value="" placeholder="Name" id="ad-name">
+              <span class="error-message">This field is compulsory</span>
+              <div class="select-list">
+                <ul class="select-list-ul">
+                  <li class="select-item"></li>
+                </ul>
+
+              </div>
+            </div>
+            <div class="text-box one-half validate">
+              <label for="ad-clicks" class="label">Department
+              </label>
+              <input class="text-box-input" type="text" name="ad-clicks" value="" placeholder="Department" id="ad-clicks">
+              <span class="error-message">Enter a valid number</span>
+              <div class="select-list">
+                <ul class="select-list-ul">
+                  <li class="select-item"></li>
+                </ul>
+
+              </div>
+            </div>
+            <div class="text-box one-half validate-number">
+              <label for="ad-impressions" class="label">Year
+              </label>
+              <input class="text-box-input" type="text" name="ad-impressions" value="" placeholder="Year" id="ad-impressions">
+              <span class="error-message">Enter a valid number</span>
+              <div class="select-list">
+                <ul class="select-list-ul">
+                  <li class="select-item"></li>
+                </ul>
+
+              </div>
+            </div>
+            <div class="text-box one-half dropdown autocomplete validate-number">
+              <label for="ad-priority" class="label">Level
+              </label>
+              <input class="text-box-input" type="text" name="ad-priority" value="" placeholder="Level" readonly="readonly" id="ad-priority">
+              <span class="error-message">This field is compulsory</span>
+              <div class="select-list">
+                <ul class="select-list-ul">
+                  <li class="select-item">100</li>
+                  <li class="select-item">200</li>
+                  <li class="select-item">300</li>
+                  <li class="select-item">400</li>
+                </ul>
+
+              </div>
+            </div>
+
+            <div class="text-box one-half">
+              <label for="" class="label">Phone
+              </label>
+              <input class="text-box-input" type="text" name="" value="" placeholder="Phone">
+              <span class="error-message"></span>
+              <div class="select-list">
+                <ul class="select-list-ul">
+                  <li class="select-item"></li>
+                </ul>
+
+              </div>
+            </div>
+
+            <div class="text-box one-half textarea">
+              <label for="" class="label">Comments
+              </label>
+              <textarea class="text-box-input" type="text" name="" value="" placeholder="Comments"></textarea>
+              <span class="error-message"></span>
+              <div class="select-list">
+                <ul class="select-list-ul">
+                  <li class="select-item"></li>
+                </ul>
+
+              </div>
+            </div>
+
+
+            <div class="button-group">
+              <button type="submit" name="button" class="pink-button" onclick="this.blur();">Create record</button>
+
+
+            </div>
+
+
+          </form>
+        </div>
+      </div>
+    </div>
+<!-- End modal -->
+
+  </main>
+
+</body>
+<script type="text/javascript" src="input-styles.js">
+
+</script>
+<script type="text/javascript" src="app.js">
+
+</script>
+
+</html>

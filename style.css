@@ -8,6 +8,8 @@ body {
   background: #161F3B;
 }
 
+
+
 .label {
   color: #97A5CE;
   margin-bottom: 5px;
@@ -32,8 +34,8 @@ body {
   padding-left: 7%;
   padding-right: 7%;
   max-width: 850px;
-  padding-top: 70px;
-
+  padding-top: 40px;
+  margin-top: 70px;
 }
 
 .top-row {
@@ -270,6 +272,16 @@ body {
   margin: 0;
 }
 
+h1 {
+  font-family: "Muli";
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-align: left;
+  color: #ebebf2;
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+
 .modal > .top-row {
   align-items: center;
   margin-bottom: 30px;
@@ -385,14 +397,36 @@ button.filter:focus {
 
 .filter-open {
   transform: scale(1);
-
 }
 
 .filter-open ~ button.filter {
   background-image: url(input-style-assets/arrow-point-up.svg);
 }
 
+.remove-row {
+  transform: scaleY(0);
+  transition: transform 0.2s ease-out;
+  animation: shrink 0.2s 0.2s ease forwards;
+}
 
+@keyframes shrink {
+  to {
+    height: 0;
+    margin-bottom: 0;
+  }
+}
+
+.new-row-added {
+  transform: scaleY(0);
+  animation: grow 0.2s 0.2s ease forwards;
+}
+
+@keyframes grow {
+  to {
+    transform: scaleY(1);
+  }
+
+}
 
 
 @media only screen and (max-width: 480px) {

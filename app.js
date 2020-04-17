@@ -11,7 +11,12 @@ const bodyRow = function() {
 
 const deleteRow = function(event) {
   if (event.target.className == 'delete-button')
-  event.target.parentElement.remove();
+  function remove() {
+    event.target.parentElement.remove();
+  }
+  event.target.parentElement.classList.remove('new-row-added');
+  event.target.parentElement.classList.add('remove-row');
+  setTimeout(remove, 300);
 }
 
 document.querySelector('.ads-table').addEventListener('click',deleteRow);
@@ -43,7 +48,7 @@ const createAd = function(event) {
   event.preventDefault();
   let newRow = (() => {
     let temp = document.createElement('template');
-    temp.innerHTML = `<div class="record-row body ${priorityColors[document.querySelector('#ad-priority').value]}">
+    temp.innerHTML = `<div class="record-row new-row-added body ${priorityColors[document.querySelector('#ad-priority').value]}">
       <div class="record-row-edge">
 
       </div>

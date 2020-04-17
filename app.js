@@ -43,8 +43,8 @@ const createAd = function(event) {
   event.preventDefault();
   let newRow = (() => {
     let temp = document.createElement('template');
-    temp.innerHTML = `<div class="ad-row body ${priorityColors[document.querySelector('#ad-priority').value]}">
-      <div class="ad-row-edge">
+    temp.innerHTML = `<div class="record-row body ${priorityColors[document.querySelector('#ad-priority').value]}">
+      <div class="record-row-edge">
 
       </div>
       <div class="col-1">
@@ -132,14 +132,14 @@ const search = function (event, term) {
 
 // document.querySelector('.button-notification').textContent = Object.values(priorityColors).length;
 
-// console.log(priorityColors.values);
+
 
 document.querySelector('.search > .text-box-input').addEventListener('keyup', search);
 
 
 const showFilter = function(event) {
 
-  console.log(!document.querySelector('.filter-dropdown').classList.contains('filter-open'));
+
   if (!document.querySelector('.filter-dropdown').classList.contains('filter-open')) {
     document.querySelector('.filter-dropdown').classList.add('filter-open');
     event.target.style.backgroundImage = 'url(input-style-assets/arrow-point-up.svg)';
@@ -208,5 +208,18 @@ const filterRows = function(event) {
 for (let i = 0; i < document.querySelectorAll('.filter-label > input[type=checkbox]').length; i++) {
     document.querySelectorAll('.filter-label > input[type=checkbox]')[i].addEventListener('click', filterRows);
 }
+
+// const closeFilter = function (event) {
+//   if (event.target.classList.contains('filter-dropdown')) {
+//     console.log(event.target);
+//     return;
+//   }
+//   // console.log(event.target);
+//   document.querySelector('.filter-dropdown').classList.remove('filter-open');
+//
+// }
+//
+// document.addEventListener('click', closeFilter, false);
+
 
 document.querySelector('form').addEventListener('submit', createAd);

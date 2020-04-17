@@ -102,7 +102,7 @@ body {
   overflow: scroll;
 }
 
-.ad-row {
+.record-row {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -134,7 +134,7 @@ body {
 }
 
 
-.ad-row-edge {
+.record-row-edge {
   width: 4px;
   height: 100%;
   border-radius: 4px 0 0 4px;
@@ -156,19 +156,19 @@ body {
   padding-left: 10px;
 }
 
-.orange > .col-3::before, .orange > .ad-row-edge  {
+.orange > .col-3::before, .orange > .record-row-edge  {
   background-color: #F4B17B;
 }
 
-.green .ad-row-edge, .green > .col-3::before {
+.green .record-row-edge, .green > .col-3::before {
   background-color:  #81CEA5;
 }
 
-.blue .ad-row-edge, .blue > .col-3::before {
+.blue .record-row-edge, .blue > .col-3::before {
   background-color:  #598CDF;
 }
 
-.red .ad-row-edge, .red > .col-3::before {
+.red .record-row-edge, .red > .col-3::before {
   background-color: #df184a;
 }
 
